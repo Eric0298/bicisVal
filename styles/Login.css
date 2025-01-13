@@ -2,7 +2,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f9f9f9; /* Fondo claro */
+    background-color: #f9f9f9; 
     margin: 0;
     padding: 0;
     display: flex;
@@ -28,15 +28,26 @@ header {
     justify-content: space-between;
     align-items: center;
 }
+header a { 
+    text-decoration: none; 
+    color: #333; 
+    transition: transform 0.5s; 
+         
+}
+ header a:hover { 
+    transform: scale(1.1); 
+    text-decoration: none;
+}
 #idioma{
     padding: 5px 10px;
-  background-color: #f0f0f0; /* Puedes cambiar el color de fondo */
-  border: 2px solid #ccc; /* Borde del botón */
-  border-radius: 5px; /* Bordes redondeados */
-  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-  display: inline-flex; /* Alinea los elementos dentro del botón */
-  align-items: center; /* Centra las imágenes verticalmente */
-  justify-content: space-between; /* Espacio entre las banderas */
+  background-color: #f0f0f0; 
+  border: 2px solid #ccc; 
+  border-radius: 5px; 
+  cursor: pointer; 
+  display: inline-flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  
 }
 #idioma img{
   width: 30px; 
