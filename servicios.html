@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="sitio web donde puedes alquilar, comprar y reparar bicicletas en la zona de Valencia y alrededores">
+    <meta name="keywords" content="Bicicletas, Alquiler, Compra, Reparación, Valencia">
+    <meta name="author" content="Eric Mancebo Muminhodzic">
+    <title>SERVICIOS</title>
+    <link rel="stylesheet" href="styles/servicios.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">bicisVal</div>
+        <nav>
+            <ul>
+                <li><a href="venta.html">Comprar bicicletas</a></li>
+                <li><a href="alquiler.html">Alquilar bicicletas</a></li>
+                <li><a href="reparaciones.html">Reparación de bicicletas</a></li>
+            </ul>
+        </nav>
+        <div>
+            <button id="idioma"><img src="images/banderaEspaña.jpeg" alt="Bandera España"> / <img src="images/banderaCValenciana.jpeg" alt="Bandera Comunidad Valenciana"></button>
+        </div>
+        <div id="usuario">
+            <a href="inicioSesion.html">Usuario</a>
+        </div>
+    </header>
+    
+    <main>
+        <div id="Titular">
+        <h1>Servicios sobre ruedas</h1>
+        <p>Nuestros servicios de alquiler y reparación de bicicletas garantizan que siempre estés en movimiento. Alquila la bicicleta ideal y confía en nuestros expertos para mantenerla en perfecto estado.</p>
+    </div>
+       
+        <div id="alquilar" class="section layout">
+            <form id="formulario-alquiler" class="formulario">
+                <h2>Alquiler de Bicicletas</h2>
+                <div class="form-group">
+                    <label for="tipo-bicicleta">Tipo de Bicicleta</label>
+                    <select id="tipo-bicicleta" name="tipo-bicicleta" required onchange="actualizarOpcionesBicicleta()">
+                        <option value="" disabled selected>Seleccione el tipo</option>
+                        <option value="electrica">Eléctrica</option>
+                        <option value="clasica">Clásica</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="modelo-bicicleta">Modelo de Bicicleta</label>
+                    <select id="modelo-bicicleta" name="modelo-bicicleta" required>
+                        <option value="" disabled selected>Seleccione el modelo</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="tiempo-uso">Tiempo de Uso (horas)</label>
+                    <input type="number" id="tiempo-uso" name="tiempo-uso" min="1" placeholder="Horas de uso" required onchange="calcularCosto()">
+                </div>
+                <div id="precio-total">Total: $0</div>
+                <div class="form-group">
+                    <label for="metodo-pago">Método de Pago</label>
+                    <select id="metodo-pago" name="metodo-pago" required>
+                        <option value="" disabled selected>Seleccione el método de pago</option>
+                        <option value="tarjeta">Tarjeta de Crédito/Débito</option>
+                        <option value="paypal">PayPal</option>
+                        <option value="efectivo">Bizum</option>
+                    </select>
+                </div>
+                <input type="submit" value="Reservar Bicicleta">
+
+            </form>
+            <img src="images/alquila.jpg" alt="Pareja con bicicleta en casco urbano">
+            
+        </div>
+
+        <!-- Sección Ventajas de Andar en Bicicleta -->
+        <section id="ventajas">
+            <h2>¿Por qué elegir la bicicleta?</h2>
+            <div class="beneficios">
+                <article class="ventaja">
+                    <img src="images/medioambient.jpg" alt="Imagen representando ecología">
+                    <h3>Beneficio Medioambiental</h3>
+                    <p>Andar en bicicleta reduce la contaminación y ayuda a cuidar el planeta, siendo una opción ecológica y sostenible.</p>
+                </article>
+                <article class="ventaja">
+                    <img src="images/mejoraSalud.jpg" alt="Imagen representando salud">
+                    <h3>Mejora la Salud</h3>
+                    <p>El ciclismo es una excelente forma de ejercicio, fortalece el sistema cardiovascular y mejora la resistencia física.</p>
+                </article>
+                <article class="ventaja">
+                    <img src="images/mejoraTrafico.jpg" alt="Imagen representando el tráfico">
+                    <h3>Evita el Tráfico</h3>
+                    <p>Con una bicicleta puedes moverte ágilmente por la ciudad, evitando los atascos y ganando tiempo en tus trayectos.</p>
+                </article>
+            </div>
+        </section>
+
+        
+        <div id="reparacion" class="section layout">
+        
+            <img src="images/reparaciones.jpg" alt="Imagen de reparación de bicicleta">
+            <form id="formulario-reparacion" class="formulario">
+                <h2>Reparación de Bicicletas</h2>
+                <div class="form-group">
+                    <label for="fecha-cita">Fecha de la Cita</label>
+                    <input type="date" id="fecha-cita" name="fecha-cita" required>
+                </div>
+                <div class="form-group">
+                    <label for="hora-cita">Hora de la Cita</label>
+                    <select id="hora-cita" name="hora-cita" required>
+                        <option value="" disabled selected>Seleccione la hora</option>
+                        <option value="08:00">08:00 </option>
+                        <option value="09:00">09:00 </option>
+                        <option value="10:00">10:00 </option>
+                        <option value="11:00">11:00 </option>
+                        <option value="12:00">12:00 </option>
+                        <option value="13:00">13:00 </option>
+                        <option value="15:00">15:00 </option>
+                        <option value="16:00">16:00 </option>
+                        <option value="17:00">17:00 </option>
+                        <option value="18:00">18:00 </option>
+                        <option value="19:00">19:00 </option>
+                        <option value="20:00">20:00 </option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="tipo-reparacion">Tipo de Reparación</label>
+                    <select id="tipo-reparacion" name="tipo-reparacion" required>
+                        <option value="" disabled selected>Seleccione el tipo de reparación</option>
+                        <option value="cuadro">Cuadro</option>
+                        <option value="manillar">Manillar</option>
+                        <option value="frenos">Frenos</option>
+                        <option value="ruedas">Ruedas</option>
+                        <option value="cadena">Cadena</option>
+                        <option value="pedales">Pedales</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="observaciones">Observaciones</label>
+                    <textarea id="observaciones" name="observaciones" placeholder="Especifique el problema o detalles adicionales"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="metodo-pago-reparacion">Método de Pago (para asegurar la reserva)</label>
+                    <select id="metodo-pago-reparacion" name="metodo-pago-reparacion" required>
+                        <option value="" disabled selected>Seleccione el método de pago</option>
+                        <option value="tarjeta">Tarjeta de Crédito/Débito</option>
+                        <option value="paypal">PayPal</option>
+                        <option value="efectivo">Bizum</option>
+                    </select>
+                </div>
+                <input type="submit" value="Reservar Cita de Reparación">
+            </form>
+        </div>
+
+        <!-- Sección Historia del Taller y de la Bicicleta -->
+        <section id="historia">
+            <h2>Nuestra Historia</h2>
+            <article class="historia-taller">
+                <h3>El Taller BicisVal</h3>
+                <p>Desde hace más de 10 años, en BicisVal ofrecemos servicios de alquiler, reparación y venta de bicicletas. Nuestro taller fue fundado con la visión de fomentar el uso de la bicicleta en Valencia y brindar servicios de calidad para todos los ciclistas de la zona.</p>
+            </article>
+            
+        </section>
+    </main>
+    <footer>
+        <div>
+         <p>C. de San José de Calasanz, 21, Extramurs,46008 Valencia</p>
+     </div>
+     <div>
+         <p>nuestras redes sociales</p>
+         <ul>
+             <li>instagram</li>
+             <li>x</li>
+             <li>tiktok</li>
+             <li>facebook</li>
+             <li>pinterest</li>
+         </ul>
+     
+         </div>
+         <div>
+         <strong>tlf : 610271191</strong>
+         <p>correo:bicisVal@gmail.com</p>
+     </div>
+     </footer>
+     <script src="scripts/calculadorTiempoPrecio.js"></script>
+    </body>
+    </html>
+
+    

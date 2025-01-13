@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Catalogo con todo tipo de productos relacionados con el mundo de la bicicleta">
+    <meta name="keywords" content="Bicicletas,Compra,Casco,Guantes,Manillar,Pedal,Pedales,Cadena,Piñon,Plato,Valencia">
+    <meta name="author" content="Eric Mancebo Muminhodzic">
+    <link rel="stylesheet" href="styles/catalogo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src ="scripts/productoCarta.js"></script>
+    <title>bicisVal</title>
+</head>
+<body>
+    <header>
+        <div class="logo">bicisVal</div>
+        <nav>
+            <ul>
+               <li><a href="venta.html">Comprar bicicletas</a></li>
+               <li><a href="alquiler.html">Alquilar bicicletas</a></li>
+               <li><a href="reparaciones.html">Reparacion de bicicletas</a></li>
+            </ul>
+        </nav>
+        <div>
+            <button id ="idioma"><img src="images/banderaEspaña.jpeg">/<img src="images/banderaCValenciana.jpeg"></button><!-- boton para cambiar el idioma de la pagina web-->
+        </div>
+        <div id="usuario">
+       <a href="inicioSesion.html">Usuario</a><!--aqui debe de poner el nombre del usuario registrado-->
+        </div>   
+    </header>
+    <main>
+        <section class="bicicletas">
+            <div class="carousel">
+                <!-- Radio buttons para cada slide -->
+                <input type="radio" name="slide" id="slide1" checked>
+                <input type="radio" name="slide" id="slide2">
+                
+                <!-- Contenedor de las imágenes del carrusel -->
+                <div class="carousel-imagenes">
+                    <div class="carousel-item">
+                        <img src="/images/BicicletaMontañaSlider.jpeg" alt="Bicicleta de montaña">
+                        <div class="carousel-descripcion">
+                            <h4>Aventuras en Terreno Difícil</h4>
+                            <p>Explora senderos y desafía la naturaleza con bicicletas de montaña.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/biciCarreteraSlider.jpeg" alt="Bicicleta de carretera">
+                        <div class="carousel-descripcion">
+                            <h4>Velocidad en la Carretera</h4>
+                            <p>Siente la adrenalina con bicicletas de carretera.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/bicicletaVintageSlider.jpeg" alt="Bicicleta vintage">
+                        <div class="carousel-descripcion">
+                            <h4>Estilo Clásico en la Ciudad</h4>
+                            <p>Elegancia del pasado con bicicletas vintage.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/bicicletaElectricaSlider.jpeg" alt="Bicicleta eléctrica">
+                        <div class="carousel-descripcion">
+                            <h4>Energía al Alcance de Tu Mano</h4>
+                            <p>Desplázate fácilmente con bicicletas eléctricas.</p>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Controles para navegar -->
+                <div class="controles">
+                    <label for="slide1" class="control prev">&lt;</label>
+                    <label for="slide2" class="control next">&gt;</label>
+                </div>
+            </div>
+        
+            <div class="contenedor-productos">
+                <article class="producto" id="producto1">
+                    <img src="https://contents.mediadecathlon.com/p2021839/k$9ef77d1c20368b5fd1bd0e44805b47a6/sq/bicicleta-de-carretera-aluminio-freno-de-disco-triban-rc-120-azul-gris-claro.jpg?format=auto&f=1800x1800" alt="Bicicleta de Carretera">
+                    <h5>Triban</h5>
+                    <p class="precio">1,256.87€</p>
+                    <div class="descripcion-detallada">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                    <a href="#" class="VerMas-btn">Ver más</a>
+                    <a href="#" class="VerMenos-btn">Ver menos</a>
+                </article>
+                <article class="producto" id="producto2">
+                    <img src="https://contents.mediadecathlon.com/p2623157/k$56a387f834df8816d5aabd60fd676bba/sq/bicicleta-de-montana-mtb-29-aluminio-rockrider-explore-500-negro.jpg?format=auto&f=646x646" alt="Bicicleta de Montaña">
+                    <h5>RockRider</h5>
+                    <p class="precio">967.53€</p>
+                    <div class="descripcion-detallada">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                    <a href="#" class="VerMas-btn">Ver más</a>
+                    <a href="#" class="VerMenos-btn">Ver menos</a>
+                </article>
+                <article class="producto" id="producto3">
+                    <img src="https://contents.mediadecathlon.com/p1862101/k$2afed5a14930d20b348c05604f59762c/sq/bicicleta-urbana-cuadro-bajo-elops-540-azul-petroleo.jpg?format=auto&f=646x646" alt="Bicicleta de Ciudad">
+                    <h5>Elops 540 azul petróleo</h5>
+                    <p class="precio">449.99€</p>	
+                    <div class="descripcion-detallada">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                    <a href="#" class="VerMas-btn">Ver más</a>
+                    <a href="#" class="VerMenos-btn">Ver menos</a>
+                </article>
+                <article class="producto" id="producto4">
+                    <img src="https://contents.mediadecathlon.com/p2322255/k$20b3ee8829babba2ce91de43f7e68841/sq/bicicleta-electrica-trekking-cuadro-bajo-riverside-100-e-azul.jpg?format=auto&f=646x646" alt="Bicicleta Eléctrica">
+                    <h5>Riverside</h5>
+                    <p class="precio">1500.99€</p>
+                    <div class="descripcion-detallada">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                    <a href="#" class="VerMas-btn">Ver más</a>
+                    <a href="#" class="VerMenos-btn">Ver menos</a>
+                </article>
+               
+            
+            
+            </div>
+        </section>
+        
+        <section id="cascos" class="cascos">
+            <div class="carousel">
+                <!-- Radio buttons para cada slide -->
+                <input type="radio" name="slide" id="slide3" checked>
+                <input type="radio" name="slide" id="slide4">
+                
+                <!-- Contenedor de las imágenes del carrusel -->
+                <div class="carousel-imagenes">
+                    <div class="carousel-item">
+                        <img src="/images/CascoCarreraSlider.jpeg" alt="Bicicleta de montaña">
+                        <div class="carousel-descripcion">
+                            <h4> Cascos Aerodinámicos</h4>
+                            <p>Desafía al viento y conquista la velocidad. Diseñados para maximizar el rendimiento en carretera.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/cascoMountainBikeSlider.jpeg" alt="Bicicleta de carretera">
+                        <div class="carousel-descripcion">
+                            <h4>Cascos para Montaña</h4>
+                            <p>Explora sin límites. Protección y ventilación óptima para enfrentar cualquier sendero.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/cascoCompetenciaSlider.jpeg" alt="Bicicleta vintage">
+                        <div class="carousel-descripcion">
+                            <h4>Cascos de Competencia en Ruta</h4>
+                            <p>Ligereza y ventilación para largas distancias. Perfectos para ciclistas de ruta que buscan velocidad y confort.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/CascoUrbanoSlider.jpeg" alt="Bicicleta eléctrica">
+                        <div class="carousel-descripcion">
+                            <h4>Cascos Urbanos</h4>
+                            <p>Estilo y seguridad en la ciudad. Diseñados para la movilidad urbana con un toque de sofisticación.</p>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Controles para navegar -->
+                <div class="controles">
+                    <label for="slide3" class="control prev">&lt;</label>
+                    <label for="slide4" class="control next">&gt;</label>
+                </div>
+            </div>
+                
+            <div class="contenedor-productos">
+                <article class="producto" id="producto5">
+                    <img src="https://contents.mediadecathlon.com/p2637779/k$26aeb95bb2d551a112c565612c7448ec/sq/casco-ciclismo-carretera-fcr-decathlon-ag2r-la-mondiale-blanco.jpg?format=auto&f=646x646" alt="Casco Ciclismo Carretera">
+                    <h5>VAN RYSEL</h5>
+                    <p class="precio">79.99€</p>
+                    <div class="descripcion-detallada">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                    <a href="#" class="VerMas-btn">Ver más</a>
+                    <a href="#" class="VerMenos-btn">Ver menos</a>
+                </article>
+                <article class="producto" id="producto6">
+                    <img src="https://contents.mediadecathlon.com/p2443246/k$f6e485ec3438ec893b159864fa028763/sq/casco-bicicleta-mtb-adulto-expl-100-azul.jpg?format=auto&f=646x646" alt="Casco de Bicicleta de Montaña">
+                    <h5>ROCKRIDER H.3</h5>
+                    <p class="precio">45.99€</p>
+                    <div class="descripcion-detallada">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                    <a href="#" class="VerMas-btn">Ver más</a>
+                    <a href="#" class="VerMenos-btn">Ver menos</a>
+                </article>
+                <article class="producto" id="producto7">
+                    <img src="https://contents.mediadecathlon.com/p2637957/k$1a68852511d3f783f4e4ee2aef63b221/sq/casco-ciclismo-carretera-fcr-mips-negro.jpg?format=auto&f=646x646" alt="Casco Ciclsmo Carretera Endura">
+                    <h5>ENDURA</h5>
+                    <p class="precio">49.99€</p>	
+                    <div class="descripcion-detallada">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                    <a href="#" class="VerMas-btn">Ver más</a>
+                    <a href="#" class="VerMenos-btn">Ver menos</a>
+                </article>
+                <article class="producto" id="producto8">
+                    <img src="https://contents.mediadecathlon.com/p2322963/k$6f3bfd2f400c974592f97445d908db27/sq/casco-bici-urbana-abus-villete-20-negro.jpg?format=auto&f=646x646" alt="Casco de ciclismo Urbano">
+                    <h5>ABUS</h5>
+                    <p class="precio">99.99€</p>
+                    <div class="descripcion-detallada">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                    <a href="#" class="VerMas-btn">Ver más</a>
+                    <a href="#" class="VerMenos-btn">Ver menos</a>
+                </article>
+            </div>
+        </section>
+        
+        <section class="ropayaccesorios">
+            <div class="carousel">
+                <!-- Radio buttons para cada slide -->
+                <input type="radio" name="slide" id="slide5" checked>
+                <input type="radio" name="slide" id="slide6">
+                
+                <!-- Contenedor de las imágenes del carrusel -->
+                <div class="carousel-imagenes">
+                    <div class="carousel-item">
+                        <img src="/images/mallotSlider.jpeg" alt="mallot ciclismo">
+                        <div class="carousel-descripcion">
+                            <h4>A la Moda sobre Dos Ruedas</h4>
+                            <p> Eleva tu estilo y rendimiento con nuestros mallots de ciclismo. Diseñados para la velocidad y la comodidad, estos jerseys son la combinación perfecta de funcionalidad y diseño.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/zapatosCiclismoSlider.jpeg" alt="zapatos de Ciclismo">
+                        <div class="carousel-descripcion">
+                            <h4>Pisando Firme en Cada Pedalada</h4>
+                            <p>Encuentra el par perfecto para tus aventuras sobre la bicicleta. Nuestros zapatos de ciclismo ofrecen un ajuste preciso, soporte excepcional y un estilo que se destaca.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/botellinDeAguaSlider.jpeg" alt="Botellas de Agua ciclismo">
+                        <div class="carousel-descripcion">
+                            <h4>Hidratación y Energía al Alcance</h4>
+                            <p>Mantente fresco y lleno de energía durante cada recorrido con nuestros botellines de agua y suplementos deportivos.</p>	
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/gafasDeSolSlidder.jpeg" alt="gafas de Sol Ciclismo">
+                        <div class="carousel-descripcion">
+                            <h4>Visión Clara y Estilo sin Límites</h4>
+                            <p>Protege tus ojos y mejora tu rendimiento con nuestras gafas de sol y accesorios para ciclistas. Con diseños que combinan funcionalidad y estilo.</p>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Controles para navegar -->
+                <div class="controles">
+                    <label for="slide5" class="control prev">&lt;</label>
+                    <label for="slide6" class="control next">&gt;</label>
+                </div>
+            </div>
+                
+            <div class="contenedor-productos">
+                <article class="producto" id="producto9">
+                    <img src="https://contents.mediadecathlon.com/p2748211/k$f3c6e33b8574fef6f2b6e217c3575946/sq/maillot-ciclismo-manga-corta-hombre-uae-team-emirates.jpg?format=auto&f=646x646" alt="Camiseta de Ciclismo">
+                    <h5>UAE Team Emirates</h5>
+                    <p class="precio">39.99€</p>
+                    <div class="descripcion-detallada">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                    <a href="#" class="VerMas-btn">Ver más</a>
+                    <a href="#" class="VerMenos-btn">Ver menos</a>
+                </article>
+                <article class="producto" id="producto10">
+                    <img src="https://contents.mediadecathlon.com/p2694112/k$e178d0c9348d47873917939ae80f93ac/sq/zapatillas-ciclismo-carretera-van-rysel-ncr-air-gris.jpg?format=auto&f=646x646" alt="Zapatos de Ciclismo">
+                    <h5>VAN RYSEL</h5>
+                    <p class="precio">80.99€</p>
+                    <div class="descripcion-detallada">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                    <a href="#" class="VerMas-btn">Ver más</a>
+                    <a href="#" class="VerMenos-btn">Ver menos</a>
+                </article>
+                <article class="producto" id="producto11">  
+                    <img src="https://contents.mediadecathlon.com/m6281923/k$752bc22739b38db26637c94b08ce68da/sq/botellin-de-hidratacion-de-tpu-con-450-ml-de-capacidad-columbus-outdoor.jpg?format=auto&f=646x646" alt="Botellin de Agua">
+                    <h5>COLUMBUS OUTDOOR</h5>
+                    <p class="precio">17.99€</p>	
+                    <div class="descripcion-detallada">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                    <a href="#" class="VerMas-btn">Ver más</a>
+                    <a href="#" class="VerMenos-btn">Ver menos</a>
+                </article>
+                <article class="producto" id="producto12">
+                    <img src="https://contents.mediadecathlon.com/p2665615/k$4b144fe21d3c5833f46ea4cb7e999061/sq/gafas-ciclismo-roadr-900-perf-blanco-categoria-3-decathlon-ag2r.jpg?format=auto&f=646x646" alt="Gafas de sol ciclismo">
+                    <h5>ARE WINNERS</h5>
+                    <p class="precio">34.95€</p>
+                    <div class="descripcion-detallada">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                    <a href="#" class="VerMas-btn">Ver más</a>
+                    <a href="#" class="VerMenos-btn">Ver menos</a>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div>
+         <p>C. de San José de Calasanz, 21, Extramurs,46008 Valencia</p>
+     </div>
+     <div>
+         <p>nuestras redes sociales</p>
+         <ul>
+            <li><img src="images/facebookLogo.jpg"></li>
+             <li><img src="images/instagramLogo.jpg"></li>
+             <li><img src="images/tiktokLogo.jpg"></li>
+             <li><img src="images/twitterLogo.jpg"></li>
+             <li><img src="images/youtubeLogo.jpg"></li>
+         </ul>
+     
+         </div>
+         <div>
+         <strong>tlf : 610271191</strong>
+         <p>correo:bicisVal@gmail.com</p>
+     </div>
+     </footer>
+    
+</body>
+</html>
