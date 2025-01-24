@@ -1,0 +1,133 @@
+.section.layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    align-items: center;
+    gap: 20px;
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 10px;
+  
+  }
+  
+  
+  .section.layout .formulario {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .section.layout img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    
+    
+  }
+  
+  .section.layout .form-group {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  .section.layout .form-group label {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  .section.layout h2 {
+    font-family: 'Poppins', sans-serif;
+    color: #349de3;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .section.layout .form-group input[type="text"],
+  .section.layout .form-group input[type="number"],
+  .section.layout .form-group input[type="date"],
+  .section.layout .form-group select,
+  .section.layout .form-group textarea {
+    background-color: #f9f9f9;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    padding: 12px 15px;
+    font-size: 1rem;
+    color: #333;
+    outline: none;
+    transition: border 0.3s, box-shadow 0.3s;
+  }
+  .section.layout .form-group input[type="text"]:hover,
+  .section.layout .form-group input[type="number"]:hover,
+  .section.layout .form-group input[type="date"]:hover,
+  .section.layout .form-group select:hover,
+  .section.layout .form-group textarea:hover,
+  .section.layout .form-group input[type="text"]:focus,
+  .section.layout .form-group input[type="number"]:focus,
+  .section.layout .form-group input[type="date"]:focus,
+  .section.layout .form-group select:focus,
+  .section.layout .form-group textarea:focus {
+    border-color: #349de3;
+    box-shadow: 0 0 5px rgba(52, 157, 227, 0.5);
+  }
+  .section.layout .form-group select {
+    appearance: none;
+    background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23349de3"><path d="M7 10l5 5 5-5H7z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px;
+    padding-right: 35px;
+  }
+  .section.layout .form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+  }
+  #precio-total {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #ee1919;
+    margin-top: 10px;
+    text-align: center;
+  }
+  .section.layout input[type="submit"] {
+    background-color: #349de3;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .section.layout input[type="submit"]:hover {
+    background-color: #3ea6e7;
+    transform: translateY(-2px);
+  }
+  .section.layout input[type="submit"]:active {
+    transform: translateY(1px);
+  }
+  
+  .section.layout .form-group input[type="text"],
+  .section.layout .form-group input[type="number"],
+  .section.layout .form-group input[type="date"],
+  .section.layout .form-group select,
+  .section.layout .form-group textarea {
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .section.layout .image-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); 
+    border-radius: 10px;
+  }
