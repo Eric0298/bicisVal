@@ -1,0 +1,99 @@
+@use '../VarsAndMixins/variables' as vars;
+@use '../VarsAndMixins/mixins' as mixins;
+.contenedor-productos{
+    display: flex;
+    gap : 20px;
+    width: 100%;
+    margin-bottom: 50px;
+    
+    }
+    .producto{
+        background-color: vars.$text-color;
+        border-radius: 5px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        text-align: center;
+        flex: 1;
+        overflow: hidden;
+    }
+    
+    .producto img{
+        width: 80%;
+        max-height: 200px;
+        border-radius: 5px;
+        object-fit: cover;
+        height: 80%;
+        
+    }
+    .producto h5{
+        @include mixins.font-style(vars.$font-family, vars.$font-sizeParrafos2, vars.$text-color-dark);
+        margin: 10px 0;
+    }
+    .producto .precio{
+        @include mixins.font-style(vars.$font-family, vars.$font-sizeParrafos2, vars.$text-color-dark);
+        padding: 10px;
+    }
+    .VerMas-btn{
+        background-color: vars.$hover-color;
+    @include mixins.font-style(vars.$font-family, vars.$font-sizeParrafos2, vars.$text-color);
+    font-weight: bold;
+    border-radius: 5px;
+    border: solid vars.$hover-color;
+    cursor: pointer;
+    padding: 0% 10%;
+    margin: 10px;
+    text-decoration: none;
+    
+    
+    }
+    
+    
+    .VerMas-btn:hover{
+        background-color: lighten(vars.$hover-color, 10%);
+    }
+    .producto:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    }
+    .descripcion-detallada {
+        font-size: 0.9rem;
+        color: #333;
+        margin-top: 10px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+    
+    producto:hover .descripcion-detallada {
+        max-height: 200px; 
+    }
+    .descripcion-detallada{
+        max-height: 0;
+        opacity: 0;
+        transition: max-height 0.3s ease, opacity 0.3s ease;
+    }
+    .producto:target .descripcion-detallada {
+        max-height: 200px;
+        opacity: 1;
+    }
+    .producto:target {
+        transform: scale(1.05);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    }
+    .producto:target .VerMas-btn {
+        display: none;
+    }
+    .VerMenos-btn {
+        display: none;
+    }
+    
+    producto:target .VerMenos-btn {
+        display: inline-block;
+        background-color: vars.$background-color;
+        color:vars.$text-color;
+        font-weight: bold;
+        border-radius: 5px;
+        padding: 5px 15px;
+        text-decoration: none;
+        cursor: pointer;
+    }

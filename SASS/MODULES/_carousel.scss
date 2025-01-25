@@ -1,0 +1,122 @@
+@use '../VarsAndMixins/variables' as vars;
+@use '../VarsAndMixins/mixins' as mixins;
+.carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+    height: 60vh;
+    margin: auto;
+   
+    margin-bottom: 50px;
+}
+
+.carousel-imagenes {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+    height: 100%; 
+}
+
+.carousel-item {
+    min-width: 50%;
+    position: relative;
+    @include mixins.flex-center;
+    flex-direction: column;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+
+.carousel-descripcion {
+    position: absolute;
+    bottom: 160px;
+    left: 50px;
+    color: vars.$text-color;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 80%;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.carousel-descripcion h4 {
+    margin: 0;
+    @include mixins.font-style(vars.$font-family, vars.$font-sizeTitulos2, vars.$text-color);
+    text-shadow: -1px -1px 0 #ffffff32,  
+    1px -1px 0 #ffffff32, 
+   -1px  1px 0 #ffffff32, 
+    1px  1px 0 #ffffff32,
+    ;
+}
+
+.carousel-descripcion p {
+    margin: 5px 0 0;
+    @include mixins.font-style(vars.$font-family, vars.$font-sizeParrafos, vars.$text-color);
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+
+.controles {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.control {
+    border: none;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: vars.$text-color;
+    @include mixins.transition(opacity, 0.4s, ease-in-out);
+}
+
+.control:hover {
+    font-size: 2em;
+    
+}
+
+.control.prev {
+    left: 10px;
+}
+
+.control.next {
+    right: 10px;
+}
+
+
+#slide1:checked ~ .carousel-imagenes {
+    transform: translateX(0);
+}
+
+#slide2:checked ~ .carousel-imagenes {
+    transform: translateX(-100%);
+}
+#slide3:checked ~ .carousel-imagenes {
+    transform: translateX(0);
+}
+
+#slide4:checked ~ .carousel-imagenes {
+    transform: translateX(-100%);
+}
+
+#slide5:checked ~ .carousel-imagenes {
+    transform: translateX(0);
+}
+
+#slide6:checked ~ .carousel-imagenes {
+    transform: translateX(-100%);
+}

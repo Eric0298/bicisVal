@@ -1,103 +1,104 @@
+@use '../VarsAndMixins/variables' as vars;
+@use '../VarsAndMixins/mixins' as mixins;
 header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.9); 
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 10px 20px;
-  }
-  h1, h2, h3, h4 {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    color: #ffffff;}
-    p {
-        font-family: 'Roboto', sans-serif;
-        font-weight: 300;
-        line-height: 1.6;
-        margin-bottom: 1em;
-        text-align: center;
-    }
-  
-  #idioma {
-    padding: 5px 10px;
-    background-color: #f0f0f0; 
-    border: 2px solid #ccc; 
-    border-radius: 5px; 
-    cursor: pointer; 
-    display: inline-flex; 
-    align-items: center; 
-    justify-content: space-between; 
-  }
-  
-  #idioma img {
-    width: 30px; 
-    height: auto;
-    margin: 0 5px; 
-    border-radius: 5px;
-  }
-  
-  #usuario a, nav ul li a {
-    text-decoration: none;
-    color: #333;
-    padding: 10px;
-    transition: color 0.3s ease, border-bottom 0.3s ease; 
-  }
-  
-  #usuario a:hover, nav ul li a:hover {
-    color: #000;
-    border-bottom: 2px solid #000; 
-  }
-  
-  .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-  
-  nav {
-    position: relative;
-  }
-  
-  nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 20px;
-  }
-  
-  nav ul li {
-    position: relative;
-  }
-  
-  nav ul li ul {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: white;
-    list-style: none;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-    min-width: 150px;
-  }
-  
-  nav ul li:hover ul {
-    opacity: 1;
-    visibility: visible;
-  }
-  
-  nav ul li ul li a {
-    padding: 10px;
-    display: block;
-    color: #333;
-  }
-  
-  nav ul li ul li a:hover {
-    color: white;
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(vars.$text-color, 0.9);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  @include mixins.flex-center;
+  justify-content: space-evenly;
+  padding: 10px 20px;
+}
+
+h1, h2, h3, h4 {
+  @include mixins.font-style(vars.$font-family, vars.$font-sizeTitulos, vars.$text-color);
+  font-weight: 600;
+}
+
+p {
+  @include mixins.font-style(vars.$font-family, vars.$font-sizeParrafos, vars.$text-color-dark);
+  line-height: 1.6;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+#idioma {
+  padding: 5px 10px;
+  background-color: vars.$background-dark;
+  border: 2px solid vars.$text-color-dark;
+  border-radius: 5px;
+  cursor: pointer;
+  @include mixins.flex-center;
+  justify-content: space-between;
+}
+
+#idioma img {
+  width: 30px;
+  height: auto;
+  margin: 0 5px;
+  border-radius: 5px;
+}
+
+#usuario a, nav ul li a {
+  text-decoration: none;
+  @include mixins.font-style(vars.$font-family, vars.$font-sizeParrafos2, vars.$color-nav-link);
+  padding: 10px;
+  @include mixins.transition(opacity, 0.4s, ease-in-out);
+}
+
+#usuario a:hover, nav ul li a:hover {
+  color: vars.$color-nav-link-hover;
+  border-bottom: 2px solid vars.$color-nav-link-hover;
+}
+
+.logo {
+  font-size: vars.$font-sizeTitulos3;
+  font-weight: bold;
+}
+
+nav {
+  position: relative;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: vars.$text-color;
+  list-style: none;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  @include mixins.transition(opacity, 0.4s, ease-in-out);
+  min-width: 150px;
+}
+
+nav ul li:hover ul {
+  opacity: 1;
+  visibility: visible;
+}
+
+nav ul li ul li a {
+  padding: 10px;
+  display: block;
+  color: vars.$text-color-dark;
+}
+
+nav ul li ul li a:hover {
+  color: vars.$text-color;
+}

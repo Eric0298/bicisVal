@@ -1,0 +1,12 @@
+
+@use './MODULES/header';
+@use'./MODULES/footer';
+@use './MODULES/productosCatalogo';
+@use './MODULES/carousel';
+@use './VarsAndMixins/variables' as vars;
+@use './VarsAndMixins/mixins' as mixins;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}

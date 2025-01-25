@@ -1,0 +1,90 @@
+
+@use './MODULES/header';
+@use'./MODULES/footer';
+@use './MODULES/carta';
+@use './MODULES/mapa';
+@use './VarsAndMixins/variables' as vars;
+@use './VarsAndMixins/mixins'as mixins;
+body {
+    margin: 0;
+    font-family:vars.$font-family;
+    background-color: vars.$background-dark;
+    color: vars.$text-color-dark;
+}
+  
+main section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    position: relative;
+    color: vars.$text-color;
+    font-size: 2rem;
+    font-weight: bold;
+}
+      
+      #venta, #alquiler, #reparaciones, #a1, #a2, #a3, #v1, #v2, #v3, #r1, #r2, #r3 {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100vw;
+        height: 100vh;
+      }
+      
+      #venta { background-image: url('/images/section1.jpg'); }
+      #alquiler { background-image: url('/images/section2.jpg'); }
+      #reparaciones { background-image: url('/images/section3\ \(2\).jpg'); }
+      #a1 { background-image: url("/images/alquilabicicletas1.jpg"); }
+      #a2 { 
+        background-image: url("/images/alquilabicicletas2\ .jpg"); 
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        flex-direction: column; 
+        text-align: center; 
+        padding: 20px;
+      }
+      #a2 h1 { font-size: 2em; margin-bottom: 20px; }
+      #v1 { background-image: url("/images/compraBicicletas1.jpg"); }
+      #v2 { background-image: url("/images/compracascos.jpg"); }
+      #v3 { background-image: url("/images/comprabiciletas3.jpg"); }
+      #a3 { background-image: url("/images/alquilabicicletas3\ .jpg"); }
+      #r1 { background-image: url("/images/repararbiciletas1.jpg"); }
+      #r2 { background-image: url("/images/repararbicicletas2.jpg"); }
+      #r3 { background-image: url("/images/reparabicicletas3.jpg"); }
+      
+      .letraPequeña {
+        font-size: 0.5em;
+        margin: 5px 0;
+      }
+      main section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
+        z-index: 1;
+    }
+      
+    main section h1, main section p {
+        position: relative;
+        z-index: 2;
+    }
+      
+    main section a {
+        display: inline-block;
+        padding: 15px 30px;
+        @include mixins.font-style(vars.$font-family, vars.$font-sizeParrafos, vars.$text-color);
+        text-decoration: none;
+        border-radius: 5px;
+        @include mixins.transition(opacity, 0.4s, ease-in-out);
+    }
+    
+    main section a:hover {
+        transform: scale(1.05);
+    }
+    

@@ -1,9 +1,11 @@
+@use '../VarsAndMixins/variables' as vars;
+@use '../VarsAndMixins/mixins' as mixins;
 .section.layout {
     display: grid;
     grid-template-columns: 1fr 1fr; 
     align-items: center;
     gap: 20px;
-    background-color: #f7f7f7;
+    background-color: vars.$background-dark;
     padding: 20px;
     border-radius: 10px;
   
@@ -11,7 +13,7 @@
   
   
   .section.layout .formulario {
-    background-color: #fff;
+    background-color: vars.$text-color;
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -37,13 +39,11 @@
   }
   .section.layout .form-group label {
     font-weight: bold;
-    color: #333;
+    @include mixins.font-style(vars.$font-family, vars.$font-sizeParrafos2, vars.$text-color-dark);
     margin-bottom: 5px;
   }
   .section.layout h2 {
-    font-family: 'Poppins', sans-serif;
-    color: #349de3;
-    font-size: 1.8rem;
+    @include mixins.font-style(vars.$font-family, vars.$font-sizeTitulos, vars.$hover-color);
     margin-bottom: 20px;
     text-align: center;
   }
@@ -52,14 +52,13 @@
   .section.layout .form-group input[type="date"],
   .section.layout .form-group select,
   .section.layout .form-group textarea {
-    background-color: #f9f9f9;
+    background-color:lighten(vars.$background-dark, 5%);
     border: 1px solid transparent;
     border-radius: 5px;
     padding: 12px 15px;
-    font-size: 1rem;
-    color: #333;
+    @include mixins.font-style(vars.$font-family, vars.$font-sizeParrafos, vars.$text-color-dark);
     outline: none;
-    transition: border 0.3s, box-shadow 0.3s;
+    @include mixins.transition(opacity, 0.4s, ease-in-out);
   }
   .section.layout .form-group input[type="text"]:hover,
   .section.layout .form-group input[type="number"]:hover,
@@ -71,7 +70,7 @@
   .section.layout .form-group input[type="date"]:focus,
   .section.layout .form-group select:focus,
   .section.layout .form-group textarea:focus {
-    border-color: #349de3;
+    border-color: vars.$text-color2;
     box-shadow: 0 0 5px rgba(52, 157, 227, 0.5);
   }
   .section.layout .form-group select {
@@ -89,24 +88,24 @@
   #precio-total {
     font-weight: bold;
     font-size: 1.2rem;
-    color: #ee1919;
+    color: vars.$hover-color;
     margin-top: 10px;
     text-align: center;
   }
   .section.layout input[type="submit"] {
-    background-color: #349de3;
-    color: white;
+    background-color:vars.$background-color;
+    @include mixins.font-style(vars.$font-family, vars.$font-sizeParrafos2, vars.$text-color);
     border: none;
     padding: 12px 20px;
     border-radius: 5px;
     font-weight: bold;
     font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
+    @include mixins.transition(opacity, 0.4s, ease-in-out);
   }
   
   .section.layout input[type="submit"]:hover {
-    background-color: #3ea6e7;
+    background-color:lighten(vars.$hover-color, 10%);
     transform: translateY(-2px);
   }
   .section.layout input[type="submit"]:active {

@@ -1,0 +1,17 @@
+@use './variables' as vars;
+@mixin font-style($family, $size, $color) {
+    font-family: $family;
+    font-size: $size;
+    color: $color;
+  }
+  
+  @mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @mixin transition($properties, $duration, $ease) {
+    transition: #{$properties} #{$duration} #{$ease};
+}
+  

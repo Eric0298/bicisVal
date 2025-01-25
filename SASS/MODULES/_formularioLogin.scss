@@ -1,3 +1,5 @@
+@use '../VarsAndMixins/variables' as vars;
+@use '../VarsAndMixins/mixins' as mixins;
 .InicioSesionFormulario {
   
     border-radius: 10px;
@@ -5,14 +7,14 @@
     padding: 30px;
     width: 300px; 
     text-align: center;
-    border: solid white 2px;
+    border: solid vars.$text-color 2px;
     backdrop-filter: blur(10px);
     border-radius: 10px;
   }
   
   h3 {
     margin-bottom: 20px;
-    color:white;
+    @include mixins.font-style(vars.$font-family, vars.$font-sizeTitulos2, vars.$text-color);
   }
   
   input[type="text"],
@@ -21,25 +23,25 @@
     width: 100%;
     padding: 10px;
     margin: 10px 0;
-    border: 1px solid #ccc;
+    border: 1px solid vars.$text-color-dark;
     border-radius: 5px;
   }
   
   input[type="submit"] {
-    background-color: #333; 
-    color: white;
+    background-color: vars.$text-color-dark;
+    @include mixins.font-style(vars.$font-family, vars.$font-sizeParrafos2, vars.$text-color);
     border: none;
     cursor: pointer;
   }
   
   input[type="submit"]:hover {
-    background-color: #555; 
+    background-color: darken(vars.$text-color-dark, 10%);
   }
   
   a {
     display: block;
     margin-top: 10px;
-    color: #007BFF; 
+    color: vars.$hover-color;
     text-decoration: none;
   }
   

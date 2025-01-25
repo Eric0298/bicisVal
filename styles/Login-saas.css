@@ -1,0 +1,191 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 10px 20px;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+  color: #fff;
+  font-weight: 600;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+#idioma {
+  padding: 5px 10px;
+  background-color: #f0f0f0;
+  border: 2px solid #333;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#idioma img {
+  width: 30px;
+  height: auto;
+  margin: 0 5px;
+  border-radius: 5px;
+}
+
+#usuario a, nav ul li a {
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  color: #d6613a;
+  padding: 10px;
+  transition: opacity 0.4s ease-in-out;
+}
+
+#usuario a:hover, nav ul li a:hover {
+  color: #c39125;
+  border-bottom: 2px solid #c39125;
+}
+
+.logo {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+nav {
+  position: relative;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  list-style: none;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease-in-out;
+  min-width: 150px;
+}
+
+nav ul li:hover ul {
+  opacity: 1;
+  visibility: visible;
+}
+
+nav ul li ul li a {
+  padding: 10px;
+  display: block;
+  color: #333;
+}
+
+nav ul li ul li a:hover {
+  color: #fff;
+}
+
+.InicioSesionFormulario {
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 300px;
+  text-align: center;
+  border: solid #fff 2px;
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+}
+
+h3 {
+  margin-bottom: 20px;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  color: #fff;
+}
+
+input[type=text],
+input[type=password],
+input[type=submit] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #333;
+  border-radius: 5px;
+}
+
+input[type=submit] {
+  background-color: #333;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: rgb(25.5, 25.5, 25.5);
+}
+
+a {
+  display: block;
+  margin-top: 10px;
+  color: #ba4de1;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("/images/inicioSESION.jpg");
+}
+
+.container {
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/*# sourceMappingURL=Login-saas.css.map */
